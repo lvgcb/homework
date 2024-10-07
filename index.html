@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calendar">
+    <div class="header">Октябрь 2024</div>
+    <div class="day-name">Пн</div>
+    <div class="day-name">Вт</div>
+    <div class="day-name">Ср</div>
+    <div class="day-name">Чт</div>
+    <div class="day-name">Пт</div>
+    <div class="day-name">Сб</div>
+    <div class="day-name">Вс</div>
+    <div class="day" onclick="openModal('1')">1</div>
+    <div class="day" onclick="openModal('2')">2</div>
+    <div class="day" onclick="openModal('3')">3</div>
+    <div class="day" onclick="openModal('4')">4</div>
+    <div class="day" onclick="openModal('5')">5</div>
+    <div class="day" onclick="openModal('6')">6</div>
+    <div class="day" onclick="openModal('7')">7</div>
+    <div class="day" onclick="openModal('8')">8</div>
+    <div class="day" onclick="openModal('9')">9</div>
+    <div class="day" onclick="openModal('10')">10</div>
+    <div class="day" onclick="openModal('11')">11</div>
+    <div class="day" onclick="openModal('12')">12</div>
+    <div class="day" onclick="openModal('13')">13</div>
+    <div class="day" onclick="openModal('14')">14</div>
+    <div class="day" onclick="openModal('15')">15</div>
+    <div class="day" onclick="openModal('16')">16</div>
+    <div class="day" onclick="openModal('17')">17</div>
+    <div class="day" onclick="openModal('18')">18</div>
+    <div class="day" onclick="openModal('19')">19</div>
+    <div class="day" onclick="openModal('20')">20</div>
+    <div class="day" onclick="openModal('21')">21</div>
+    <div class="day" onclick="openModal('22')">22</div>
+    <div class="day" onclick="openModal('23')">23</div>
+    <div class="day" onclick="openModal('24')">24</div>
+    <div class="day" onclick="openModal('25')">25</div>
+    <div class="day" onclick="openModal('26')">26</div>
+    <div class="day" onclick="openModal('27')">27</div>
+    <div class="day" onclick="openModal('28')">28</div>
+    <div class="day" onclick="openModal('29')">29</div>
+    <div class="day" onclick="openModal('30')">30</div>
+    <div class="day" onclick="openModal('31')">31</div>
+</div>
+
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Расписание уроков на <span id="modalDate"></span></h2>
+        <div id="scheduleContainer"></div>
+        <button onclick="saveSchedule()">Сохранить расписание</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
