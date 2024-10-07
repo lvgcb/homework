@@ -1,0 +1,44 @@
+const schedule = ['Математика', 'Русский язык', 'Физика', 'Литература', 'Химия'];
+
+function openModal(day) {
+    document.getElementById("modalDate").innerText = day;
+    const scheduleContainer = document.getElementById("scheduleContainer");
+    scheduleContainer.innerHTML = ''; // Очищаем контейнер перед добавлением новых полей
+
+    schedule.forEach(subject => {
+        const lessonRow = document.createElement('div');
+        lessonRow.classList.add('lesson-row');
+
+        const lessonLabel = document.createElement('span');
+        lessonLabel.innerText = subject;
+
+        const inputField = document.createElement('input');
+        inputField.type = 'text';
+        inputField.placeholder = 'Введите информацию...';
+
+        lessonRow.appendChild(lessonLabel);
+        lessonRow.appendChild(inputField);
+        scheduleContainer.appendChild(lessonRow);
+    });
+
+    document.getElementById("myModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+function saveSchedule() {
+    const inputs = document.querySelectorAll('#scheduleContainer input');
+    inputs.forEach(input => {
+        console.log(`Урок: ${input.previousSibling.innerText}, Информация: ${input.value}`);
+    });
+    closeModal();
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("myModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+}
